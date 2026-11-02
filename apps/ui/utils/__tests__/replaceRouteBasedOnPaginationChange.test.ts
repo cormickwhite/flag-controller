@@ -8,7 +8,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import replaceRouteBasedOnPaginationChange from '../replaceRouteBasedOnPaginationChange';
 
 describe('replaceRouteBasedOnPaginationChange', () => {
-  // @ts-ignore We don't need all of the properties of AppRouterInstance for these tests
+  // @ts-expect-error We don't need all of the properties of AppRouterInstance for these tests
   const mockRouter = {
     replace: vi.fn(),
   } as AppRouterInstance;

@@ -100,11 +100,11 @@ describe('updateFlagDSchema', () => {
 
     // Schemas written to disk as-is (not transformed)
     expect(writeFileSpy).toHaveBeenCalledTimes(3);
-    expect((writeFileSpy.mock.calls[0]?.[0] as string).includes('schemas/targeting.json')).toBe(true);
+    expect((writeFileSpy.mock.calls[0]?.[0] || '').includes('schemas/targeting.json')).toBe(true);
     expect(writeFileSpy.mock.calls[0]?.[1]).toEqual(`${JSON.stringify(targetingSchema, null, 2)}\n`);
-    expect((writeFileSpy.mock.calls[1]?.[0] as string).includes('schemas/flagd.json')).toBe(true);
+    expect((writeFileSpy.mock.calls[1]?.[0] || '').includes('schemas/flagd.json')).toBe(true);
     expect(writeFileSpy.mock.calls[1]?.[1]).toEqual(`${JSON.stringify(flagdSchema, null, 2)}\n`);
-    expect((writeFileSpy.mock.calls[2]?.[0] as string).includes('shared-types/src/flagd.ts')).toBe(true);
+    expect((writeFileSpy.mock.calls[2]?.[0] || '').includes('shared-types/src/flagd.ts')).toBe(true);
 
     // Root $ref resolved for compile: providerConfig inlined, $ref removed
     expect(mockedCompile).toHaveBeenCalledTimes(1);
@@ -172,7 +172,7 @@ describe('updateFlagDSchema', () => {
     await expect(updateFlagDSchema()).rejects.toThrow('compile failed');
 
     expect(writeFileSpy).toHaveBeenCalledTimes(2);
-    expect((writeFileSpy.mock.calls[0]?.[0] as string).includes('schemas/targeting.json')).toBe(true);
-    expect((writeFileSpy.mock.calls[1]?.[0] as string).includes('schemas/flagd.json')).toBe(true);
+    expect((writeFileSpy.mock.calls[0]?.[0] || '').includes('schemas/targeting.json')).toBe(true);
+    expect((writeFileSpy.mock.calls[1]?.[0] || '').includes('schemas/flagd.json')).toBe(true);
   });
 });

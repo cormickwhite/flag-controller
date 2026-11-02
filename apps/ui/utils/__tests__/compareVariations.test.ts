@@ -8,7 +8,7 @@ describe('compareVariations', () => {
   it('should return empty changes for identical variations', () => {
     const variation1 = { key: 'enabled', value: false };
     const variation2 = { key: 'enabled', value: false };
-    // @ts-ignore we don't need the whole variation
+    // @ts-expect-error we don't need the whole variation
     const result = compareVariations(variation1, variation2);
 
     expect(result).toEqual({
@@ -21,7 +21,7 @@ describe('compareVariations', () => {
   it('should detect changed variations', () => {
     const variation1 = { key: 'enabled', value: false };
     const variation2 = { key: 'enabled2', value: true };
-    // @ts-ignore we don't need the whole variation
+    // @ts-expect-error we don't need the whole variation
     const result = compareVariations(variation1, variation2);
 
     expect(result.change).toEqual([

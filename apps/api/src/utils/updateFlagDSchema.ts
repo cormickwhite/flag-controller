@@ -87,7 +87,7 @@ function fixStrictIndexSignatures(source: string): string {
 
     return interfaceBlock.replace(
       /(\[k: string\]: )((?!unknown\b)(?!.*\bundefined\b).+)(;)\s*\n\}/,
-      (match, prefix: string, indexType: string, semi: string) => `${prefix}${indexType} | undefined${semi}\n}`,
+      (_match, prefix: string, indexType: string, semi: string) => `${prefix}${indexType} | undefined${semi}\n}`,
     );
   });
 }

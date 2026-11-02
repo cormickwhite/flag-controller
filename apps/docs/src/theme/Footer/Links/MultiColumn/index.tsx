@@ -15,7 +15,7 @@ function ColumnLinkItem({ item }: { item: ColumnItemType }) {
     <li
       className={clsx('footer__item', item.className)}
       // Developer provided the HTML, so assume it's safe.
-      // eslint-disable-next-line react/no-danger
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: Swizzled as-is
       dangerouslySetInnerHTML={{ __html: item.html }}
     />
   ) : (
@@ -41,8 +41,8 @@ function Column({ column }: { column: ColumnType }) {
 export default function FooterLinksMultiColumn({ columns }: Props): ReactNode {
   return (
     <div className="row footer__links">
-      {columns.map((column, i) => (
-        <Column key={i} column={column} />
+      {columns.map((column) => (
+        <Column key={column.title} column={column} />
       ))}
     </div>
   );

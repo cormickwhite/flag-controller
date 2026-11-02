@@ -8,9 +8,9 @@ import {
   RuleServeType,
   RuleConditionType,
   RuleConditionValueType,
-  ContextRuleCondition,
+  type ContextRuleCondition,
   FractionalType,
-  TimeRuleCondition,
+  type TimeRuleCondition,
   TimeZone,
 } from 'shared-types';
 import { describe, expect, it } from 'vitest';

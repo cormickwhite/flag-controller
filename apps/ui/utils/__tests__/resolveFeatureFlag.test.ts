@@ -9,7 +9,7 @@ import {
   RuleConditionValueType,
   EnvironmentKey,
   type ContextRuleCondition,
-  SegmentRuleCondition,
+  type SegmentRuleCondition,
 } from 'shared-types';
 import { describe, expect, it } from 'vitest';
 

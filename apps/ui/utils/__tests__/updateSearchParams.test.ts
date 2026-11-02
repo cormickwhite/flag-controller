@@ -12,7 +12,6 @@ describe('updateSearchParams', () => {
       ['new', 'parameter'],
       ['existing', 'updated'],
     ];
-    // @ts-ignore mocking ReadonlyURLSearchParams
     const result = updateSearchParams(initialParams, updates);
 
     expect(result).toEqual('existing=updated&keep=this&new=parameter');

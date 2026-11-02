@@ -1,6 +1,6 @@
 import type { FromSchema } from 'json-schema-to-ts';
 
-import { ruleSchema } from 'schemas/rules.js';
+import type { ruleSchema } from 'schemas/rules.js';
 import type { PreSerializedFromSchema } from './preSerializedFromSchema.js';
 
 // PreSerializedFromSchema maps every date-time to Date, including ones nested in conditions.

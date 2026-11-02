@@ -9,7 +9,9 @@ function objectToSearchParams(object: Record<string, unknown>) {
 
   Object.entries(object).forEach(([key, value]) => {
     if (Array.isArray(value)) {
-      value.forEach((v) => params.append(key, v));
+      value.forEach((v) => {
+        params.append(key, v);
+      });
     } else {
       params.append(key, value as string);
     }

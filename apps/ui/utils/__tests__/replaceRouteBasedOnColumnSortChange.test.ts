@@ -9,7 +9,7 @@ import { ColumnSortingDirection } from '../../typings/api';
 import replaceRouteBasedOnColumnSortChange from '../replaceRouteBasedOnColumnSortChange';
 
 describe('replaceRouteBasedOnColumnSortChange', () => {
-  // @ts-ignore We don't need all of the properties of AppRouterInstance for these tests
+  // @ts-expect-error We don't need all of the properties of AppRouterInstance for these tests
   const router = {
     replace: vi.fn(),
   } as AppRouterInstance;
