@@ -110,7 +110,11 @@ export default function Home() {
               variant={LinkButtonVariant.Secondary}
               className="!text-blue-link hover:!text-blue-link dark:!bg-dark-bg dark:hover:!bg-dark-bg dark:!border-blue-link"
             />
-            <LinkButton label="View on GitHub" href="https://github.com/cvs-health/flag-controller" icon={<Icon name={IconName.Github} />} />
+            <LinkButton
+              label="View on GitHub"
+              href="https://github.com/cvs-health/flag-controller"
+              icon={<Icon name={IconName.Github} />}
+            />
           </div>
           <ThemedImage
             alt="Screenshot of Flags Table UI"
