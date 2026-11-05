@@ -1,4 +1,5 @@
-# ⛳️ Flag Controller
+![Flag Controller](/apps/docs/static/img/logo.svg#gh-light-mode-only)
+![Flag Controller](/apps/docs/static/img/logo_dark.svg#gh-dark-mode-only)
 
 Flag Controller is an open-source feature flag management platform built on [OpenFeature](https://openfeature.dev/). It lets teams turn functionality on or off without changing source code or redeploying. See the [documentation](apps/docs) for concepts, architecture, and usage.
 
